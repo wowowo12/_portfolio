@@ -12,25 +12,25 @@
   var db = firebase.database();
   var googleAuth = new firebase.auth.GoogleAuthProvider();
 
-  $(".google_login").click(function(){
+  $("#google_login").click(function(){
 	auth.signInWithPopup(googleAuth);
   })
-  $(".google_logout").click(function(){
+  $("#google_logout").click(function(){
 	  auth.signOut();
   });
 
-
- function init(){
-	  $(".google_login").hide();
- 	  $(".google_logout").show();
-   }
-   auth.onAuthStateChanged(function(result){
+  auth.onAuthStateChanged(function(result){
 	user = result;
 	  if(result) init();
  	 
-   })
+   });
 
-   
+ function init(){
+	  $("#google_login").hide();
+ 	  $("#google_logout").show();
+ }
+ 
+ 
  $(window).scroll(function() {
  	if($(this).scrollTop() <= 100){
  		$('#nav').slideDown().css({'background-color':'rgba(98,96,95,0.5)','display':'block'})}

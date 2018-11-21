@@ -48,17 +48,19 @@ animation:1.5s range linear; animation-fill-mode:forwards }
 #web .txt>h5{color:#f16521;}
 
 #poster_contact{height:100%; background-color:#fff}
-#poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#7c7a77}
+#poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#7c7a77; position:relative; z-index:8 }
 .posters{width:2350px; padding:0 100px ; animation-name:poster; animation-duration: 15s;
-        animation-iteration-count: infinite;animation-timing-function: linear; position:relative; }
+        animation-iteration-count: infinite;animation-timing-function: linear;  }
 .posters>a{float:left;}
 .posters>a{margin:0 15px; }
 .posters>a>img{max-height:300px;}
 .posters>a>img:hover{opacity:0.7;}
 
 #contact{width:50%; height:calc( 100% - 350px ); position:relative;  }
-/* #contact>.l_circle{width:40%; height:100%; background-color:rgba(255,197,0,0.5); border-radius:100%; position:absolute;
-left:-20%;} */
+#contact>.l_circle{width:50%; height:100%; background-color:rgba(255,197,0,0.5); border-radius:100%; position:absolute;
+ left:-25%;} 
+#google_logout{display:none;}
+#google_login, #google_logout {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
 #print{width:50%;}
 @keyframes h_img{
     0%{opacity:0;}
