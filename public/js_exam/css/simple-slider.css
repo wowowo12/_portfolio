@@ -1,5 +1,6 @@
 .slider {
-  width: 300px;
+  width: 200px;
+  display:inline-block
 }
 
 .slider > .dragger {
@@ -17,8 +18,8 @@
   border-radius: 10px;
 
   border: 1px solid #496805;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
 }
 
 .slider > .dragger:hover {
