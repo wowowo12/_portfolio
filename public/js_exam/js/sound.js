@@ -59,3 +59,11 @@ function soundPlay(){
 		this.classList.toggle("fa-pause-circle", false);
 	}
 }
+$("#sel_snd").on("change",function(){
+	$("#snd")[0].src = $(this).val(); //audio자체의 src속성을 바꿔주는 값을 써야한다. method가 아닌 property(
+	$("#snd")[0].play();
+	$("#bt_play").removeClass("fa-play-circle").addClass("fa-pause-circle");
+})
+
+
+//--->정리 

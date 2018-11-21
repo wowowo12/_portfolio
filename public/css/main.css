@@ -6,7 +6,7 @@
 .navs>li>a{padding:0 101px; height:inherit; display:inline-block; width:inherit; line-height:100px; color:#fff;}
 .navs>li:nth-child(3)>a{background-color:rgba(255,197,0,0.7); width:25px; height:50px; border-radius: 50px  0 0 50px; margin:25px 50px 0 50px; padding:0;}
 .navs>li>a:hover{color:#ffb300; background-color:rgba(0,0,0,0.4);}
-.navs .navs_menu{background-color:rgba(255,255,255,0.9); position:absolute; width:inherit; width:261.64px; border:1px solid rbga(0,0,0,0.7);
+.navs .navs_menu{border:1px solid rbga(0,0,0,0.7);
 display:none;}
 .navs_menu>li>a{padding:0.7em 0; display:block;}
 .navs_menu>li>a:hover{background-color:rgba(0,0,0,0.9)}
@@ -34,7 +34,7 @@ display:none;}
 #about_me>.row{padding:0 200px}
 #about_me .me_left, #about_me .me_right{width:48%;}
 #about_me .me:not(.me_1){width:100%;  margin-top: 1rem;
-padding:10px 20px;; border:1px solid rgba(224,224,224,0.6);}
+padding:10px 20px;; }
 
 .me_left>.me_3>p>i{color:#ffb300;}
 .me_left>.me_4>p{width:50%;}
