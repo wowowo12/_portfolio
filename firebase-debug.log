@@ -1,25 +1,59 @@
-[debug] [2018-11-21T02:02:07.707Z] ----------------------------------------------------------------------
-[debug] [2018-11-21T02:02:07.715Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2018-11-21T02:02:07.716Z] CLI Version:   6.0.1
-[debug] [2018-11-21T02:02:07.716Z] Platform:      win32
-[debug] [2018-11-21T02:02:07.716Z] Node Version:  v10.13.0
-[debug] [2018-11-21T02:02:07.721Z] Time:          Wed Nov 21 2018 11:02:07 GMT+0900 (GMT+09:00)
-[debug] [2018-11-21T02:02:07.721Z] ----------------------------------------------------------------------
+[debug] [2018-11-21T02:38:37.478Z] ----------------------------------------------------------------------
+[debug] [2018-11-21T02:38:37.484Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-21T02:38:37.485Z] CLI Version:   6.0.1
+[debug] [2018-11-21T02:38:37.485Z] Platform:      win32
+[debug] [2018-11-21T02:38:37.485Z] Node Version:  v10.13.0
+[debug] [2018-11-21T02:38:37.489Z] Time:          Wed Nov 21 2018 11:38:37 GMT+0900 (GMT+09:00)
+[debug] [2018-11-21T02:38:37.489Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-11-21T02:02:07.763Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-11-21T02:02:07.765Z] > authorizing via signed-in user
-[debug] [2018-11-21T02:02:07.765Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
-[debug] [2018-11-21T02:02:07.777Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+[debug] [2018-11-21T02:38:37.520Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-21T02:38:37.522Z] > authorizing via signed-in user
+[debug] [2018-11-21T02:38:37.522Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2018-11-21T02:38:37.529Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-21T02:38:37.529Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-21T02:38:37.919Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-21T02:38:37.937Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
 
-[debug] [2018-11-21T02:02:09.138Z] <<< HTTP RESPONSE 200
-[debug] [2018-11-21T02:02:09.143Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+[debug] [2018-11-21T02:38:39.158Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-21T02:38:39.162Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
  
-[debug] [2018-11-21T02:02:10.295Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-21T02:38:40.318Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'D:\fbroot\portfolio'...
 [info] 
-[debug] [2018-11-21T02:02:10.302Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+[debug] [2018-11-21T02:38:40.325Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
  
-[debug] [2018-11-21T02:02:10.961Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-21T02:38:40.939Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-11-21T04:29:00.115Z] ----------------------------------------------------------------------
+[debug] [2018-11-21T04:29:00.125Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-21T04:29:00.125Z] CLI Version:   6.0.1
+[debug] [2018-11-21T04:29:00.125Z] Platform:      win32
+[debug] [2018-11-21T04:29:00.126Z] Node Version:  v10.13.0
+[debug] [2018-11-21T04:29:00.130Z] Time:          Wed Nov 21 2018 13:29:00 GMT+0900 (GMT+09:00)
+[debug] [2018-11-21T04:29:00.130Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-21T04:29:00.193Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-21T04:29:00.195Z] > authorizing via signed-in user
+[debug] [2018-11-21T04:29:00.195Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2018-11-21T04:29:00.199Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-21T04:29:00.200Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-21T04:29:00.572Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-21T04:29:00.581Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+
+[debug] [2018-11-21T04:29:01.813Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-21T04:29:01.819Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+ 
+[debug] [2018-11-21T04:29:02.992Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\fbroot\portfolio'...
+[info] 
+[debug] [2018-11-21T04:29:02.997Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+ 
+[debug] [2018-11-21T04:29:03.741Z] <<< HTTP RESPONSE 200
+[warn] !  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5005

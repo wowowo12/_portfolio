@@ -43,7 +43,7 @@ $("#bt_play").click(function(){
 });
 */
 // 3번 순수 자바스크립트
-
+/*
 var snd = document.querySelector("#snd");
 var btPlay = document.querySelector("#bt_play");
 btPlay.addEventListener("click", soundPlay);
@@ -65,6 +65,27 @@ $("#sel_snd").on("change", function () {
 	$("#bt_play").removeClass("fa-play-circle").addClass("fa-pause-circle");
 })
 
+*/
+function musicPlay(opt) {
+	if (opt) {
+		$("#snd")[0].play();
+		$("#bt_play").removeClass("fa-play-circle").addClass("fa-pause-circle");
+		console.log($("#snd")[0].textTracks);
+	} else {
+		$("#snd")[0].pause();
+		$("#bt_play").removeClass("fa-pause-circle").addClass("fa-play-circle");
+	}
+}
+
+$("#bt_play").on("click", function () {
+	if ($("#snd")[0].paused) musicPlay(true);
+	else musicPlay(false);
+});
+
+$("#sel_snd").on("change", function () {
+	$("#snd")[0].src = $(this).val();
+	musicPlay(true);
+});
 
 $("[data-slider]").on("slider:ready", function (e, data) {
 	$("#snd")[0].volume = 0.5;
@@ -74,18 +95,43 @@ $("[data-slider]").on("slider:changed", function (e, data) {
 });
 
 $("#bt_volume").on("click", function () {
-	if ($(this).hasClass("fa-volume-up")) 
+	if ($(this).hasClass("fa-volume-up")) //($("snd")[0].muted)
 	{
 		$(this).removeClass("fa-volume-up").addClass("fa-volume-off");
 		$("#snd")[0].muted =true;
-	
 	}
-	else($(this).hasClass("fa-volume-off"))
+	else
 	{
 		$(this).removeClass("fa-volume-off").addClass("fa-volume-up");
 		$("#snd")[0].muted = false;
 	
 	}
 })
+$("#bt_stop").on("click", function(){
+ //console.log( $("#snd")[0].currentTime) //현재시점의 진행시간
+$("#snd")[0].currentTime=0;
+musicPlay(false)
+});
 
 //--->정리
+/*function musicPlay(opt) {
+	if (opt) {
+		$("#snd")[0].play();
+		$("#bt_play").removeClass("fa-play-circle").addClass("fa-pause-circle");
+		console.log($("#snd")[0].textTracks);
+	} else {
+		$("#snd")[0].pause();
+		$("#bt_play").removeClass("fa-pause-circle").addClass("fa-play-circle");
+	}
+}
+
+$("#bt_play").on("click", function () {
+	if ($("#snd")[0].paused) musicPlay(true);
+	else musicPlay(false);
+});
+
+$("#sel_snd").on("change", function () {
+	$("#snd")[0].src = $(this).val();
+	musicPlay(true);
+});
+*/
