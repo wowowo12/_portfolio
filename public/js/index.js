@@ -1,4 +1,3 @@
-
   var config = {
     apiKey: "AIzaSyDAaQWzoUwJr8lN-RpBH5-Xx_Ys0oy_MxM",
     authDomain: "wowowo-portfolio.firebaseapp.com",
@@ -14,19 +13,24 @@
   var googleAuth = new firebase.auth.GoogleAuthProvider();
 
   $(".google_login").click(function(){
-	auth.signInWithRedirect(googleAuth);
+	auth.signInWithPopup(googleAuth);
   })
   $(".google_logout").click(function(){
 	  auth.signOut();
   });
-  function init(){
+
+
+ function init(){
 	  $(".google_login").hide();
-	  $(".google_logout").show();
-  }
-  auth.onAuthStateChanged(function(result){
+ 	  $(".google_logout").show();
+   }
+   auth.onAuthStateChanged(function(result){
+	user = result;
 	  if(result) init();
-	  else{}
-  })
+ 	 
+   })
+
+   
  $(window).scroll(function() {
  	if($(this).scrollTop() <= 100){
  		$('#nav').slideDown().css({'background-color':'rgba(98,96,95,0.5)','display':'block'})}
