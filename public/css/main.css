@@ -49,7 +49,7 @@ animation:1.5s range linear; animation-fill-mode:forwards }
 
 #poster_contact{height:100%; background-color:#fff}
 #poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#7c7a77; position:relative; z-index:8 }
-.posters{width:2350px; padding:0 100px ; animation-name:poster; animation-duration: 15s;
+.posters{width:2550px; padding:0 100px ; animation-name:poster; animation-duration: 15s;
         animation-iteration-count: infinite;animation-timing-function: linear;  }
 .posters>a{float:left;}
 .posters>a{margin:0 15px; }
@@ -60,7 +60,7 @@ animation:1.5s range linear; animation-fill-mode:forwards }
 #contact>.l_circle{width:50%; height:100%; background-color:rgba(255,197,0,0.5); border-radius:100%; position:absolute;
  left:-25%;} 
 #google_logout{display:none;}
-#google_login, #google_logout {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
+#email {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
 #print{width:50%;}
 @keyframes h_img{
     0%{opacity:0;}

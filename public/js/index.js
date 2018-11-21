@@ -26,7 +26,7 @@
    });
 
  function init(){
-	  $("#google_login").hide();
+	  //$("#google_login").hide();
  	  $("#google_logout").show();
  }
  
