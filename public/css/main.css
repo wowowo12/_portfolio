@@ -48,12 +48,12 @@ animation:1.5s range linear; animation-fill-mode:forwards }
 #web .txt>h5{color:#f16521;}
 
 #artwork{height:100%; background-color:#fff}
-#poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#7c7a77;  }
+#poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#fff; }
 .posters{width:3000px; padding:0 100px  }
 .posters>a{float:left; margin:0 15px;}
-.posters>a>img{max-height:350px;}
+.posters>a>img{max-height:310px;}
 .posters>a>img:hover{opacity:0.7;}
-#print{width:100%; overflow:hidden; height:calc(100% - 400px); background-color:#fff;}
+#print{width:100%; height:calc(100% - 360px); background-color:#fff;}
 
 #contact{width:50%; height:calc( 100% - 350px ); position:relative;  }
 #contact>.l_circle{width:50%; height:100%; background-color:rgba(255,197,0,0.5); border-radius:100%; position:absolute;
