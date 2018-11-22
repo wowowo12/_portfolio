@@ -1,9 +1,9 @@
-.fa-bars{display:none; color:#fff; font-size:22px;}
+.fa-bars{display:block; color:#fff; font-size:22px;position:fixed; right:35px; top:39px; z-index:999999;}
 #nav{text-align:center; background-color:rgba(98,96,95,0.5); position:fixed; width:100%; z-index:99999;
 }
 .navs{height:100px; text-align:center;}
 .navs>li{float:left; width:20%;}
-.navs>li>a{width:100%; height:inherit; display:inline-block; line-height:100px; color:#fff;}
+.navs>li>a{width:100%; height:inherit; display:inline-block; line-height:100px; color:#fff; text-align:center;}
 .navs>li:nth-child(3)>a{background-color:rgba(255,197,0,0.7); width:25px; height:50px; border-radius: 50px  0 0 50px; margin:25px 50px 0 50px; padding:0;}
 .navs>li>a:hover{color:#ffb300; background-color:rgba(0,0,0,0.4);}
 .navs .navs_menu{border:1px solid rbga(0,0,0,0.7);
@@ -47,21 +47,20 @@ animation:1.5s range linear; animation-fill-mode:forwards }
 #web .txt>p:nth-child(2){margin-bottom:20px;}
 #web .txt>h5{color:#f16521;}
 
-#poster_contact{height:100%; background-color:#fff}
-#poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#7c7a77; position:relative; z-index:8 }
-.posters{width:2550px; padding:0 100px ; animation-name:poster; animation-duration: 15s;
-        animation-iteration-count: infinite;animation-timing-function: linear;  }
-.posters>a{float:left;}
-.posters>a{margin:0 15px; }
-.posters>a>img{max-height:300px;}
+#artwork{height:100%; background-color:#fff}
+#poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#7c7a77;  }
+.posters{width:3000px; padding:0 100px  }
+.posters>a{float:left; margin:0 15px;}
+.posters>a>img{max-height:350px;}
 .posters>a>img:hover{opacity:0.7;}
+#print{width:100%; overflow:hidden; height:calc(100% - 400px); background-color:#fff;}
 
 #contact{width:50%; height:calc( 100% - 350px ); position:relative;  }
 #contact>.l_circle{width:50%; height:100%; background-color:rgba(255,197,0,0.5); border-radius:100%; position:absolute;
  left:-25%;} 
 #google_logout{display:none;}
 #email {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
-#print{width:50%;}
+
 @keyframes h_img{
     0%{opacity:0;}
     100%{opacity:1;}
@@ -81,13 +80,12 @@ animation:1.5s range linear; animation-fill-mode:forwards }
     100%{width:85%;}
 }
 @media screen and (max-width:960px){
-    .fa-bars{display:block; position:fixed; right:15px; top:25px; z-index:999999; }
+   
     #header>.l_img{max-width:400px; top:250px;}
     #header>.r_img{max-width:400px;}
     .navs{margin-top:75px; padding:0;}
     #nav{height:100% ; width:100%;}
-    .navs>li>a{width:100%; padding:0;}
     .navs>li:nth-child(3)>a{margin:25px 0;}
-.navs>li{float:none;}
+.navs>li{float:none; width:100%;}
 }
 
