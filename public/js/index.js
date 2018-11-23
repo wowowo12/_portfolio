@@ -201,23 +201,23 @@
 		tooltips : {
 			enabled: false
 		},
-		legend :{
-			labels :{
-			boxWidth :10
-		}
-		}
+	cutoutPercentage: 65
+		
 	},{
 		tooltips : {
 			enabled: false
-		}
+		},
+		cutoutPercentage: 65
 	},{
 		tooltips : {
 			enabled: false
-		}
+		},
+		cutoutPercentage: 65
 	},{
 		tooltips : {
 			enabled: false
-		}
+		},
+		cutoutPercentage: 65
 	}];
 	var chart = [];
 	
