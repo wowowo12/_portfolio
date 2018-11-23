@@ -25,6 +25,7 @@ display:none;}
 
 #about_me{width:100%;padding:50px 0 50px; background-color:#7c7a77; height:100%;}
 #about_me>.row{padding:0 200px}
+.me_img{opacity:0.6}
 #about_me .me_left, #about_me .me_right{width:48%;}
 #about_me .me:not(.me_1){width:100%;  margin-top: 1rem;
 padding:10px 20px;; }
@@ -32,7 +33,9 @@ padding:10px 20px;; }
 .me_right>.me_5>p{width:50%;}
 .me_bottom>.skills>.range_bg{width:80%; background-color:#fff; height:1.2rem; position:relative; margin-top:5px;}
 .me_bottom>.software, .me_bottom>.skills{width:48%;}
-.me_bottom>.software>.softwares>div{width:25%; text-align:center;}
+.me_bottom>.software>.softwares>div{width:25%; text-align:center; margin-bottom:10px;}
+.me_bottom>.software>.softwares>div:nth-child(5){width:100%;}
+.softwares .chart_wrap{width:25%;}
 .softwares{margin-top:1rem;}
 .range_bg>.range{background-color:#ffb300; height:1.2rem;position:absolute;
 animation:1.5s range linear; animation-fill-mode:forwards }

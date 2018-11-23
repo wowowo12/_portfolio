@@ -1,25 +1,105 @@
-[debug] [2018-11-22T07:14:27.036Z] ----------------------------------------------------------------------
-[debug] [2018-11-22T07:14:27.039Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2018-11-22T07:14:27.040Z] CLI Version:   6.1.1
-[debug] [2018-11-22T07:14:27.040Z] Platform:      win32
-[debug] [2018-11-22T07:14:27.040Z] Node Version:  v10.13.0
-[debug] [2018-11-22T07:14:27.042Z] Time:          Thu Nov 22 2018 16:14:27 GMT+0900 (GMT+09:00)
-[debug] [2018-11-22T07:14:27.042Z] ----------------------------------------------------------------------
+[debug] [2018-11-23T00:43:13.146Z] ----------------------------------------------------------------------
+[debug] [2018-11-23T00:43:13.152Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-23T00:43:13.152Z] CLI Version:   6.1.1
+[debug] [2018-11-23T00:43:13.152Z] Platform:      win32
+[debug] [2018-11-23T00:43:13.152Z] Node Version:  v10.13.0
+[debug] [2018-11-23T00:43:13.156Z] Time:          Fri Nov 23 2018 09:43:13 GMT+0900 (GMT+09:00)
+[debug] [2018-11-23T00:43:13.156Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-11-22T07:14:27.066Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-11-22T07:14:27.067Z] > authorizing via signed-in user
-[debug] [2018-11-22T07:14:27.067Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
-[debug] [2018-11-22T07:14:27.070Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+[debug] [2018-11-23T00:43:13.182Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-23T00:43:13.183Z] > authorizing via signed-in user
+[debug] [2018-11-23T00:43:13.184Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2018-11-23T00:43:13.188Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-23T00:43:13.189Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-23T00:43:13.605Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T00:43:13.616Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
 
-[debug] [2018-11-22T07:14:28.384Z] <<< HTTP RESPONSE 200
-[debug] [2018-11-22T07:14:28.390Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+[debug] [2018-11-23T00:43:14.852Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T00:43:14.855Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
  
-[debug] [2018-11-22T07:14:29.533Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T00:43:16.018Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'D:\fbroot\portfolio'...
 [info] 
-[debug] [2018-11-22T07:14:29.553Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+[debug] [2018-11-23T00:43:16.029Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
  
-[debug] [2018-11-22T07:14:30.141Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T00:43:17.013Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-11-23T01:09:16.363Z] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at write_ (_http_outgoing.js:572:17)
+    at ServerResponse.write (_http_outgoing.js:567:10)
+    at ReadStream.ondata (_stream_readable.js:666:20)
+    at ReadStream.emit (events.js:182:13)
+    at ReadStream.EventEmitter.emit (domain.js:442:20)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at ReadStream.Readable.push (_stream_readable.js:219:10)
+    at lazyFs.read (internal/fs/streams.js:181:12)
+    at FSReqWrap.wrapper [as oncomplete] (fs.js:460:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-11-23T01:09:16.418Z] Error [ERR_STREAM_WRITE_AFTER_END]: write after end
+    at write_ (_http_outgoing.js:572:17)
+    at ServerResponse.write (_http_outgoing.js:567:10)
+    at ReadStream.ondata (_stream_readable.js:666:20)
+    at ReadStream.emit (events.js:182:13)
+    at ReadStream.EventEmitter.emit (domain.js:442:20)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at ReadStream.Readable.push (_stream_readable.js:219:10)
+    at lazyFs.read (internal/fs/streams.js:181:12)
+    at FSReqWrap.wrapper [as oncomplete] (fs.js:460:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-11-23T01:09:37.035Z] ----------------------------------------------------------------------
+[debug] [2018-11-23T01:09:37.040Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-23T01:09:37.041Z] CLI Version:   6.1.1
+[debug] [2018-11-23T01:09:37.041Z] Platform:      win32
+[debug] [2018-11-23T01:09:37.041Z] Node Version:  v10.13.0
+[debug] [2018-11-23T01:09:37.044Z] Time:          Fri Nov 23 2018 10:09:37 GMT+0900 (GMT+09:00)
+[debug] [2018-11-23T01:09:37.044Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-23T01:09:37.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-23T01:09:37.074Z] > authorizing via signed-in user
+[debug] [2018-11-23T01:09:37.074Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2018-11-23T01:09:37.078Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+
+[debug] [2018-11-23T01:09:38.355Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T01:09:38.359Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+ 
+[debug] [2018-11-23T01:09:39.513Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\fbroot\portfolio'...
+[info] 
+[debug] [2018-11-23T01:09:39.523Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+ 
+[debug] [2018-11-23T01:09:40.136Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-11-23T04:17:00.444Z] ----------------------------------------------------------------------
+[debug] [2018-11-23T04:17:00.452Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-23T04:17:00.453Z] CLI Version:   6.1.1
+[debug] [2018-11-23T04:17:00.453Z] Platform:      win32
+[debug] [2018-11-23T04:17:00.453Z] Node Version:  v10.13.0
+[debug] [2018-11-23T04:17:00.460Z] Time:          Fri Nov 23 2018 13:17:00 GMT+0900 (GMT+09:00)
+[debug] [2018-11-23T04:17:00.460Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-23T04:17:00.501Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-23T04:17:00.503Z] > authorizing via signed-in user
+[debug] [2018-11-23T04:17:00.504Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2018-11-23T04:17:00.511Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+
+[debug] [2018-11-23T04:17:01.957Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-23T04:17:01.961Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+ 
+[debug] [2018-11-23T04:17:03.099Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\fbroot\portfolio'...
+[info] 
+[debug] [2018-11-23T04:17:03.106Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+ 
+[debug] [2018-11-23T04:17:04.066Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000

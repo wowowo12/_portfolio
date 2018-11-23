@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
   <script defer src="/__/firebase/5.5.8/firebase-auth.js"></script>
   <script defer src="/__/firebase/5.5.8/firebase-database.js"></script>
@@ -46,7 +47,7 @@
   <div class="row clear">
     <div class="me_left fl">
       <div class="me_1 me" style="text-align:center;">
-        <img src="image/about_me_me.png" alt="img">
+        <img src="image/about_me_me.png" alt="img" class="me_img">
       </div>
       <div class="me_2 me">
         <p>Lorem Ipsum Dolor Sit Amet,
@@ -86,10 +87,24 @@
       <div class="software clear fl">
         <h4>Software</h4>
         <div class="softwares">
-          <div class="fl"><img src="image/about_me_skill_ps.png"></div>
+          <div class="fl "><img src="image/about_me_skill_ps.png"></div>
           <div class="fl"><img src="image/about_me_skill_ai.png"></div>
           <div class="fl"><img src="image/about_me_skill_vs.png"></div>
           <div class="fl"><img src="image/about_me_skill_fire.png"></div>
+          <div class="wrap clear">
+            <div class="chart_wrap fl">
+              <canvas id="chart1" class="chart" width="80%"></canvas>
+            </div>
+            <div class="chart_wrap fl">
+              <canvas id="chart2" class="chart" width="80%"></canvas>
+            </div>
+            <div class="chart_wrap fl">
+              <canvas id="chart3" class="chart" width="80%"></canvas>
+            </div>
+            <div class="chart_wrap fl">
+              <canvas id="chart3" class="chart" width="80%"></canvas>
+            </div>
+          </div>
         </div>
       </div>
       <div class="skills fr">

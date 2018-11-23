@@ -145,6 +145,96 @@
 	});
 
 
+	/*var ctx = $("#Chart1")
+	var myChart = new Chart(ctx, {
+		type: 'doughnut',
+		data: {
+			labels: ["Ps"],
+			datasets: [{
+				data: [80,20],
+				backgroundColor: [
+					'rgba(255, 179, 0, 1)',
+					'rgba(255, 255, 255,1)',
+				],
+				borderWidth: 0
+			},]
+		},
+	});*/
+	var data = [{
+		datasets: [{
+				data: [75, 25],
+				backgroundColor: [
+					'#ffb300',
+					'#fff'
+				],
+				borderWidth: 0
+		}]
+	},{
+	datasets: [{
+				data: [70,30],
+				backgroundColor: [
+					'#ffb300',
+					'#fff'
+				],
+				borderWidth: 0
+		}]
+	},{
+		datasets: [{
+				data: [80,20],
+				backgroundColor: [
+					'#ffb300',
+					'#fff'
+				],
+				borderWidth: 0
+		}]
+	},{
+	datasets: [{
+			data: [60,40],
+			backgroundColor: [
+				'#ffb300',
+				'#fff'
+			],
+			borderWidth: 0
+	}]
+}];
+	var option = [{
+		tooltips : {
+			enabled: false
+		},
+		legend :{
+			labels :{
+			boxWidth :10
+		}
+		}
+	},{
+		tooltips : {
+			enabled: false
+		}
+	},{
+		tooltips : {
+			enabled: false
+		}
+	},{
+		tooltips : {
+			enabled: false
+		}
+	}];
+	var chart = [];
+	
+	var ctx = $(".chart");
+	ctx.each(function(i){
+		chart[i] = new Chart($(this), {
+			type: 'doughnut',
+			data: data[i],
+			options: option[i]
+		});
+	});
+	
+	
+
+
+
+
 // moveType (0:left / 1:right) 
 var moveType = 1; 
 // 이동시간간격 3초 
