@@ -42,6 +42,22 @@
 		var pages = new WheelScroll();
 	 */
 
+	var offTop = [];
+	var scTop = 0;
+	var now = 0;
+	$(window).scroll(function(){
+		scTop = $(this).scrollTop();	//현재문서의 스크롤 된 값을 찾는다.
+		$(".page").each(function(i){
+			offTop[i] = $(this).offset().top;	//부모로부터 떨어진 거리(top)
+			if(scTop >= offTop[i]) {
+				now = i; 
+			}	
+			
+		});
+		console.log(now);
+	});
+	
+
   var scTop = $(window).scrollTop(); //현재 윈도우의 scrollTop의값
   var gap = [];
   var now = 0;
@@ -93,13 +109,16 @@
  		$('#nav').slideDown().css({
    			'background-color': 'rgba(98,96,95,0.5)',
    			'display': 'block'
-   		})
-   	} else {
-   		$('#nav').css({
-   			'display': 'none'
    		});
-   	}
+   	} 
    });
+   $(window).mousemove(function(e){
+	   var posY=e.pageY;
+	   if(posY<100){
+		   $("#nav").css({"display":"block"});
+	   }
+	   if(posY>=100) $("#nav").css({"display":"none"});
+   })
 
 
 
@@ -111,7 +130,7 @@
   	var iY = $(this).find(".l_img").height() / 2;
   	var mX = (iX - cX) / delta;
   	var mY = (iY - cY) / delta;
-  	$(this).find(".l_img").css("transform", "translate(" + mX + "px, " + mY + "px)");
+  	$(this).find(".l_img").css("transform", "translate(" + -mX + "px, " + -mY + "px)");
   });
 
   $("#header").mousemove(function (evt) {
@@ -122,11 +141,11 @@
   	var iY = $(this).find(".r_img").height() / 2;
   	var mX = (iX - cX) / delta;
   	var mY = (iY - cY) / delta;
-  	$(this).find(".r_img").css("transform", "translate(" + mX + "px, " + mY + "px)");
+  	$(this).find(".r_img").css("transform", "translate(" + -mX + "px, " + -mY + "px)");
   });
 
   $("#header").mousemove(function (evt) {
-  	var delta = 50;
+  	var delta = 90;
   	var cX = evt.clientX;
   	var cY = evt.clientY;
   	var iX = $(this).find(".h_circle").width() / 2;

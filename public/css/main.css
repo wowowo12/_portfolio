@@ -10,7 +10,7 @@
 display:none;}
 .navs_menu>li>a{padding:0.7em 0; display:block;}
 .navs_menu>li>a:hover{background-color:rgba(0,0,0,0.9)}
-#header{background-color:#474646; height:100%; width:100%;position:relative; overflow:hidden;}
+#header{background-image: linear-gradient(#333,#474646); height:100%; width:100%;position:relative; overflow:hidden;}
 #header>.l_img{position:absolute; top:300px; left:-33px;max-width:550px; z-index:9;}
 #header>.r_img{position:absolute;right:-33px; top:120px; max-width:550px;}
 .l_img, .r_img{animation-name:h_img; animation-duration: 1.5s; animation-fill-mode: backwards; animation-timing-function: ease-in}
@@ -23,9 +23,10 @@ display:none;}
      animation-duration: 1s; animation-fill-mode: backwards; animation-timing-function:ease-out}
 
 
-#about_me{width:100%;background-color:#7c7a77; height:100%;}
-#about_me>.row{padding:0 200px; display:table; height:100%;}
-#about_me>.row>.table-cell{display:table-cell; vertical-align: middle}
+#about_me{width:100%;background-color:#7c7a77; height:100%; }
+#about_me>.row{padding:0 200px; display:table; height:100%; }
+#about_me>.row>.table-cell{display:table-cell; vertical-align: middle;
+    width:100%}
 .me_img{opacity:0.6}
 #about_me .me_left, #about_me .me_right{width:48%;}
 #about_me .me:not(.me_1){width:100%;  margin-top: 1rem;
@@ -80,7 +81,6 @@ display:inline-block;}
 .print_right{width:25%;padding-left:50px; position:relative;}
 .print_right>#prev,.print_right>#next{border:1px solid #000; outline:none;
 width:166px; height:45px; display:inline-block; margin:5px 0;}
-
 
 
 #contact{width:100%; height:100%; position:relative;}
