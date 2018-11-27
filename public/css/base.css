@@ -23,7 +23,7 @@ th, td {margin:0; padding:0;}
 a {text-decoration:none; color: inherit; transition:0.7s;}
 button{transition:0.5s}
 /* 보통 hover 만 준다 */
-a:link {color:#fff;}			/* 기본색 */
+			/* 기본색 */
 a:hover {color:#ffb300;}			/* 마우스를 올렸을때 */
 a:active {color:#ff0;}		/* 누르고 있는 동안 */
 

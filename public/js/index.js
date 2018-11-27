@@ -104,23 +104,24 @@
   	});
 	});
 	
-   $(window).scroll(function () {
-   	if ($(this).scrollTop() <= 100) {
- 		$('#nav').slideDown().css({
-   			'background-color': 'rgba(98,96,95,0.5)',
-   			'display': 'block'
-   		});
-   	} 
-   });
-  
+
    $(document).mousemove(function(e){
 	var posY=e.clientY;
 	if(posY<100){
-		$("#nav").css({"display":"block"});
+		$("#nav").stop().slideDown();
 	}
 });
 $("#nav").mouseleave(function(){
- $("#nav").css({"display":"none"});
+ $("#nav").stop().slideUp();
+});
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() <= 100) {
+	  $('#nav').slideDown().css({
+			'background-color': 'rgba(98,96,95,0.5)',
+			'display': 'block'
+		});	   
+	} 
 });
 
 
