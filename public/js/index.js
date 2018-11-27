@@ -112,13 +112,16 @@
    		});
    	} 
    });
-   $(window).mousemove(function(e){
-	   var posY=e.pageY;
-	   if(posY<100){
-		   $("#nav").css({"display":"block"});
-	   }
-	   if(posY>=100) $("#nav").css({"display":"none"});
-   })
+  
+   $(document).mousemove(function(e){
+	var posY=e.clientY;
+	if(posY<100){
+		$("#nav").css({"display":"block"});
+	}
+});
+$("#nav").mouseleave(function(){
+ $("#nav").css({"display":"none"});
+});
 
 
 
