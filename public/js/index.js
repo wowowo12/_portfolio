@@ -118,7 +118,6 @@ $("#nav").mouseleave(function(){
 $(window).scroll(function () {
 	if ($(this).scrollTop() <= 100) {
 	  $('#nav').slideDown().css({
-			'background-color': 'rgba(98,96,95,0.5)',
 			'display': 'block'
 		});	   
 	} 
