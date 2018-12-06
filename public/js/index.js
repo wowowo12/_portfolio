@@ -24,7 +24,8 @@
   	if (result) init();
 
   });
-
+var hei = $(window).height();
+console.log(hei);
   function init() {
   	//$("#google_login").hide();
   	$("#google_logout").show();
