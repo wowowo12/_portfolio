@@ -31,7 +31,7 @@ display:none;}
 
 /* ABOUT ME */
 #about_me{width:100%;background-color:#fdfbee; height:100%; position:relative; }
-#about_me>.deco_bg{position:absolute; height:100%;}
+#about_me>.deco_bg{position:absolute; height:100%; width:100%;}
 #about_me>.row{padding:0 200px; display:table; height:100%; position:absolute; z-index:3;
  left:50%; transform:translateX(-50%);}
 #about_me>.row>.table-cell{display:table-cell; vertical-align: middle;
@@ -91,47 +91,49 @@ border-radius:50%; margin:0 5px;}
 .dot_3{background-color:#000;}
 .web1_txt3>h5{color:#f16521; font-weight:500;}
 /* print */
-#print{width:100%; height:100% ;position:relative; z-index:15;
-    background-image: url("image/prm_bg.jpg"); 
-    background-size:cover; 
-    background-position:center center;
-background-repeat:no-repeat; }
-#print>h3{color:#fff;}
-#print>.line{width:132px; height:5px; background-color:#fad045; margin-bottom:10px;}
-#print>.print_img{width:45%; margin:0 auto;}
-.print_img>span{font-size:4em; color:#fad045; background-color:rgba(0,0,0,0.2);
-font-weight:500;}
+#print{background:url(../image/prm_bg.jpg) no-repeat center; 
+    width:100%; height:100% ; background-size:cover; position:relative;}
 
-/* #print>.print_bg1{position:absolute; z-index:-1}
-#print>.table{display:table; height:100%; width:100%;}
-#print .title{color:#000;}
-#print>.table>.table_cell{display:table-cell; vertical-align: middle; }
-#print .print_nav>li{margin:10px 0; float:left;}
-.print_nav{margin-bottom:30px;}
-.print_nav>li>a{margin-right:15px;}
-.print_left{width:50%; height:50%; text-align:center;}
-.print_left img{max-width:350px; }
-.print_center{width:25%; height:50%; font-size:14px; }
-.print_center p:nth-child(3){text-align:justify; margin-top:10px;}
-.print_right{width:25%;padding-left:50px; position:relative; height:50%;}
-#prev, #next{border:1px solid #000; outline:none; 
-width:166px; height:45px; display:inline-block; background-color:#fff;
-position:absolute; right:0;}
-#prev{bottom:55px;}
-#next{bottom:0;}
-#prev:hover, #next:hover{border:1px solid #ffb300; color:#ffb300;} */
+#print h3{color:#fff; font-weight:500;padding-top:85px;}
+ #print .line{width:132px; height:5px; background-color:#fad045; margin-bottom:10px;}
+.print_img{position:absolute; top:50%; left:50%; transform:translate(-43%,-40%);
+animation:tv_ani 1s ease-in infinite forwards;}
+.print_img img{max-width:950px;}
+.pr_tit{font-size:3.7em;color:#fad045; background-color:rgba(0,0,0,0.5);
+font-weight:500; font-weight:500; padding:0.1em 0.5em;
+position:absolute; display:inline-block; top:50%; left:49%; transform:translate(-50%,-50%)}
+@keyframes tv_ani{
+    0%{top:49%;}
+    50%{top:50%;}
+    100%{top:49%}
+}
 
-
-.poster{width:100%; overflow:hidden; padding-bottom:50px; background-color:#fff; height:100%;}
+#contact{width:100%; height:100%; position:relative;}
+.poster{width:100%; overflow:hidden; background-color:#ffe5a8;height:30%;}
 .posters{width:3000px; padding:0 100px  }
 .posters>a{float:left; margin:0 15px;}
 .posters>a>img{max-height:250px;}
 .posters>a>img:hover{opacity:0.7;}
-#contact{width:100%; height:100%; position:relative;}
-#contact>.l_circle{width:25%; height:100%; background-color:rgba(255,197,0,0.4); border-radius:100%; position:absolute;
- left:-12.5%; z-index:-1} 
+.contacts{background-color:#ffcd56; height:70%; width:100%; }
+.contacts>.row{height:100%;}
 #google_logout{display:none;}
 #email {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
+.ct_lt{float:left; width:40%;}
+.ct_lt>h3{color:#fff; font-weight:500;}
+.ct_lt>.line{background-color:#ee2e37; width:132px; height:5px;}
+.ct_ct{float:left;width:10%; height:100%;}
+.ct_ct>.tb{display:table; width:100%; height:100%; text-align:center;}
+.ct_ct>.tb>.tb_cell{display:table-cell; vertical-align: middle;}
+.ct_ct img{max-width:124px;}
+.ct_rt{float:right;width:40%; height:100%;  margin-top:2%;}
+.ct_rt .ct_bt{width:115px; height:35px; border-radius: 7px 7px 0 0; font-size:14px;
+border:0; outline:none;}
+#google_login{background-color:#fff; font-size:1;}
+#google_logout{display:none;}
+#facebook_login{color:#fff; background-color:#6f6fb2;}
+#facebook_login>i{margin-right:5px;}
+.ct_rt>.ct_wrap{
+    height:70%; background-color:#fff; border-radius:0 6% 6% 6%; width:70%;}
 
 @keyframes h_img{
     0%{opacity:0;}
