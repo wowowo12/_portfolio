@@ -23,28 +23,4 @@
         color:#fff;
       }
 
-    .navs>li>a {
-        transition:all 0.5s ease;
-        z-index:999999;
-        position:relative;
-      }
     
-    .navs>li>.nav_eff{
-      top:70px;
-      background:#6f6fb2;
-      position:absolute;
-      transition:all .5s ease;
-      z-index:9999900;
-      width:100%; height:inherit;
-      transition:0.3s;
-      -webkit-transition:0.3s;
-      -moz-transition:0.3s;
-      -o-transition:0.3s;
-    }
-    .navs>li>a:hover .nav_eff{
-        top:0;
-      }
-      #google_login:hover a, #google_logout:hover a{
-        color:#fff;
-      }
-  
