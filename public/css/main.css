@@ -12,7 +12,7 @@
      height:40px; line-height:10px;
     border-radius: 50px  0 0 50px; margin:15px 50px 0 50px; padding:0;}
 .navs>li:nth-child(3)>a>p{margin-left:29px; margin-top:5px; font-size:14px;color:#888;}
-.navs>li>a:hover{color:#ffb300; background-color:rgba(0,0,0,0.4);}
+ .navs>li>a:hover{color:#ffb300; background-color:rgba(0,0,0,0.4);} */
 .navs .navs_menu{border:1px solid rbga(0,0,0,0.7);
 display:none;}
 .navs_menu>li>a{padding:0.7em 0; display:block;}
@@ -125,6 +125,7 @@ position:absolute; display:inline-block; top:50%; left:49%; transform:translate(
 .posters>a>img:hover{opacity:0.7;}
 .contacts{background-color:#ffcd56; height:70%; width:100%; }
 .contacts>.row{height:100%;}
+
 #google_logout{display:none;}
 #email {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
 .ct_lt{float:left; width:37%;}
