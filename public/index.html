@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/button.css">
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script defer src="/__/firebase/5.5.8/firebase-app.js"></script>
@@ -230,10 +231,18 @@
           </div>
         </div>
         <div class="ct_rt">
-              <button class="ct_bt" id="google_login"><img src="image/google_icon.png"> 로그인</button>
-              <button class="ct_bt" id="google_logout"><img src="image/google_icon.png"> 로그아웃</button>
-              <button class="ct_bt" id="facebook_login"><i class="fab fa-facebook-f"></i> 로그인</button>
+              <div class="ct_bt" id="google_login">
+                <div class="eff"></div>
+                <a href="#"><img src="image/google_icon.png"> 로그인</a>
+              </div>
+              <div class="ct_bt" id="google_logout">
+                  <div class="eff"></div>
+                  <a href="#"><img src="image/google_icon.png"> 로그아웃</a>
+                </div>
+              <div class="ct_bt" id="facebook_login"><i class="fab fa-facebook-f"></i> 로그인</div>
               <ul class="ct_wrap">
+                <li class="ct_cont"></li>
+                <li class="ct_cont"></li>
                 <li class="ct_cont"></li>
                 <button id="ct_push">저장</button>
               </ul>

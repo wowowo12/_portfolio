@@ -19,13 +19,20 @@ div, ul, li, ol, dl, dd, dt {margin: 0; padding: 0; box-sizing: border-box; list
 .row{max-width:1260px; padding:0 10px; margin:0 auto;}
 table {margin:0; padding:0; border-collapse:collapse;}
 th, td {margin:0; padding:0;}
-
+button{background:none;}
 a {text-decoration:none; color: inherit; transition:0.7s;}
-button{transition:0.5s}
+
 /* 보통 hover 만 준다 */
 			/* 기본색 */
 a:hover {color:#ffb300;}			/* 마우스를 올렸을때 */
 a:active {color:#ff0;}		/* 누르고 있는 동안 */
+button,
+button::after {
+  -webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+	transition: all 0.2s;
+}
 
 .hand {cursor:pointer;}
 .clear {clear:both;}

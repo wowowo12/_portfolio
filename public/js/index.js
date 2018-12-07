@@ -16,7 +16,8 @@
   	auth.signInWithPopup(googleAuth);
   })
   $("#google_logout").click(function () {
-  	auth.signOut();
+	  auth.signOut();
+	
   });
 
   auth.onAuthStateChanged(function (result) {
@@ -27,8 +28,10 @@
 var hei = $(window).height();
 console.log(hei);
   function init() {
+	
   	$("#google_login").hide();
   	$("#google_logout").show();
+  	$("#facebook_login").hide();
   }
 
 	//fullpage-event
@@ -108,19 +111,17 @@ console.log(hei);
 
    $(document).mousemove(function(e){
 	var posY=e.clientY;
-	if(posY<100){
-		$("#nav").stop().slideDown();
+	if(posY<70){
+		$("#nav").css({"display":"block"});
 	}
 });
 $("#nav").mouseleave(function(){
- $("#nav").stop().slideUp();
+ $("#nav").fadeOut(300);
 });
 
 $(window).scroll(function () {
-	if ($(this).scrollTop() <= 100) {
-	  $('#nav').slideDown().css({
-			'display': 'block'
-		});	   
+	if ($(this).scrollTop() <= 70) {
+	  $('#nav').fadeOut(300);	   
 	} 
 });
 
@@ -271,11 +272,11 @@ function imgMove(){
        // 0d\일경우 left방향 
       if(moveType==0){ 
          // 맨처음 이미지의 폭 
-         var aWidth = $("#poster > .posters > a:first").width(); 
+         var aWidth = $(".poster > .posters > a:first").width(); 
          // 롤링마지막에 맨처음의 a태그 추가 
-         $("#poster > .posters").append("<a href=\""+$("#poster > .posters > a:first").attr("href")+"\">" + $("#poster > .posters > a:first").html()+ "</a>"); 
+         $(".poster > .posters").append("<a href=\""+$(".poster > .posters > a:first").attr("href")+"\">" + $(".poster > .posters > a:first").html()+ "</a>"); 
          // 맨처음이미지를 왼쪽으로 이동시킨다. 
-         $("#poster > .posters > a:first").animate({marginLeft:-aWidth},{duration:moveSpeed,step:function(){ 
+         $(".poster > .posters > a:first").animate({marginLeft:-aWidth},{duration:moveSpeed,step:function(){ 
          // 이동중 만약 일시정지 flag가 true라면 
          },complete:function(){ 
          // 이동을 마친후 첫번째 a태그를 지워버린다 
@@ -285,15 +286,15 @@ function imgMove(){
       }}); 
       }else{ 
       // 마지막 a태그의 폭 
-       var aWidth = $("#poster > .posters > a:last").width(); 
+       var aWidth = $(".poster > .posters > a:last").width(); 
        // a태그 앞에 마지막의 a태그를 생성한다 단 스타일은 마지막 a태그의 폭만큼 빼준다 
-       $("<a href=\"" + $("#poster > .posters > a:last").attr("href")+ "\" style=\"margin-left:-" + aWidth + "px\">" + $("#poster > .posters > a:last").html()+ "</a>").insertBefore("#poster > .posters > a:first") 
+       $("<a href=\"" + $(".poster > .posters > a:last").attr("href")+ "\" style=\"margin-left:-" + aWidth + "px\">" + $(".poster > .posters > a:last").html()+ "</a>").insertBefore(".poster > .posters > a:first") 
        // 맨처음 a태그의 margin-left를 다시 0으로 맞춰준다. 
-      $("#poster > .posters > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
+      $(".poster > .posters > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
        // 이동중 만약 일시정지 flag가 true라면 
        },complete:function(){ 
        // 이동을 마친후 마지막 a태그를 지워버린다 
-       $("#poster > .posters > a:last").remove(); 
+       $(".poster > .posters > a:last").remove(); 
        // 이미지 움직이는것을 다시 실행 
        imgMove(); 
     }}); 
@@ -307,7 +308,7 @@ function imgMove(){
     if(moveType==0){ 
        imgMove(); 
        }else{ 
-       $("#poster > .posters > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
+       $(".poster > .posters > a:first").animate({marginLeft:0},{duration:moveSpeed,step:function(){ 
        // 이동중 만약 일시정지 flag가 true라면 
        if(movePause==true){ 
           // 이동을 멈춘다 
