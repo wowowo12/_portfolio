@@ -95,6 +95,11 @@ border-radius:50%; margin:0 5px;}
     width:100%; height:100% ; background-size:cover; position:relative;}
 
 #print h3{color:#fff; font-weight:500;padding-top:85px;}
+#print .arrow{position:absolute; left:60%; top:17%; z-index:2}
+#print .click{position:absolute; left:55%; top:13%; 
+    color:rgba(255,255,255,0.9); font-weight:500; 
+letter-spacing:-1px; font-size:1.9em; animation:click 0.5s infinite forwards;
+}
  #print .line{width:132px; height:5px; background-color:#fad045; margin-bottom:10px;}
 .print_img{position:absolute; top:50%; left:50%; transform:translate(-43%,-40%);
 animation:tv_ani 1s ease-in infinite forwards;}
@@ -106,6 +111,10 @@ position:absolute; display:inline-block; top:50%; left:49%; transform:translate(
     0%{top:49%;}
     50%{top:50%;}
     100%{top:49%}
+}
+@keyframes click{
+    0%{opacity:1;}
+    100%{opacity:0;}
 }
 
 #contact{width:100%; height:100%; position:relative;}
@@ -121,6 +130,11 @@ position:absolute; display:inline-block; top:50%; left:49%; transform:translate(
 .ct_lt{float:left; width:37%;}
 .ct_lt>h3{color:#fff; font-weight:500;}
 .ct_lt>.line{background-color:#ee2e37; width:132px; height:5px;}
+.ct_lt>.post{background-image:url(../image/post.png); line-height:48px;
+background-repeat:no-repeat; height:48px; margin:10% 0 0 6%;}
+.ct_lt>.post:hover span{color:#ee2e37;}
+.ct_lt>.post>p>.fa-envelope{color:#fff; margin:0 22px 0 15px;}
+.ct_lt>.post>p>span{color:#494949; font-weight:bold;}
 .ct_ct{float:left;width:10%; height:100%;}
 .ct_ct>.tb{display:table; width:100%; height:100%; text-align:center;}
 .ct_ct>.tb>.tb_cell{display:table-cell; vertical-align: middle;}
@@ -128,12 +142,9 @@ position:absolute; display:inline-block; top:50%; left:49%; transform:translate(
 .ct_rt{float:right;width:40%; height:100%;  margin-top:2%;}
 .ct_rt .ct_bt{width:115px; height:35px; border-radius: 7px 7px 0 0; font-size:14px;
 display:inline-block; text-align:center;  line-height:35px; }
-#google_login{top:12px;}
 #google_login, #google_logout{background-color:#fff; font-size:14px; 
      cursor:pointer; position:relative; overflow:hidden; }
 #google_logout{display:none; color:#000;}
-#facebook_login{color:#fff; background-color:#6f6fb2;}
-#facebook_login>i{margin-right:5px;}
 .ct_rt>.ct_wrap{ border:5px solid #ffe5a8; text-align:center;
     height:70%; background-color:#fff; border-radius:0 6% 6% 6%; width:70%;}
 .ct_wrap>.ct_cont{background-color:#ffe5a8; width:90%; margin:3% auto 0; height:24.33333%;

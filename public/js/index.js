@@ -159,6 +159,17 @@ $(window).scroll(function () {
   	var mY = (iY - cY) / delta;
   	$(this).find(".h_circle").css("transform", "translate(" + mX + "px, " + mY + "px)");
   });
+  $("#contact").mousemove(function (evt) {
+	var delta = 50;
+	var cX = evt.clientX;
+	var cY = evt.clientY;
+	var iX = $(this).find(".ct_ct").width() / 2;
+	var iY = $(this).find(".ct_ct").height() / 2;
+	var mX = (iX - cX) / delta;
+	var mY = (iY - cY) / delta;
+	$(this).find(".ct_ct").css("transform", "translate(" + mX + "px, " + mY + "px)");
+});
+
 
   $(".fa-bars").click(function () {
   	$("#nav").slideToggle();

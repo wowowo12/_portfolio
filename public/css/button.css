@@ -6,7 +6,7 @@
       }
       #google_login .eff, #google_logout .eff{
         top:-50px;
-        background:#ee2e37;
+        background:#6f6fb2;
         position:absolute;
         transition:all .5s ease;
         z-index:1;
