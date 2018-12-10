@@ -1,5 +1,5 @@
 
-    #google_login a, #google_logout a{
+    #google_login a, #google_logout a, {
         transition:all .5s ease;
         z-index:2;
         position:relative;
