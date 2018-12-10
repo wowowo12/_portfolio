@@ -11,6 +11,10 @@
   var auth = firebase.auth();
   var db = firebase.database();
   var googleAuth = new firebase.auth.GoogleAuthProvider();
+  var ref;
+var user;
+var key = '';
+
 
   $("#google_login").click(function () {
   	auth.signInWithPopup(googleAuth);
@@ -22,19 +26,63 @@
 
   auth.onAuthStateChanged(function (result) {
   	user = result;
-  	if (result) init();
+	  if (result) init();
+	  else {
+		$(".login").show();
+		$(".ct_cont").empty();
+	}
 
   });
-var hei = $(window).height();
-console.log(hei);
   function init() {
-	
   	$("#google_login").hide();
-  	$("#google_logout").show();
-  	$("#facebook_login").hide();
+	  $("#google_logout").show();
+	  $(".ct_cont").empty();
+	  ref = db.ref("root/memos/");
+	  ref.on("child_added", onAdd);
+	  ref.on("child_removed", onRev);
   }
 
-	//fullpage-event
+function onAdd(data) {
+	var id = data.key;
+	var val = data.val();
+	var html = '';
+	html += '<li id="'+id+'">';
+	html += '<h6>'+val.content+'</h6>';
+	html += '<p>'+val.email+'</p>';
+	html += '<button onclick="revData(this);"><i class="fa fa-trash"></i></button>';
+	html += '</li>';
+	$(".lists").prepend(html);
+}
+function onRev(data) {
+	$("#"+data.key).remove();
+}
+$("#ct_push").click(function(){
+	var content = $("#content").val();
+	if(content == "") {
+		alert("내용을 입력하세요.");
+		$("#content").focus();
+	}
+	else {
+		ref = db.ref("root/memos/");
+		ref.push({
+			content: content,
+			wdate: new Date().getTime(),
+			email: user.email
+		}).key;
+		$("#content").val("");
+	}
+});
+function revData(obj){
+	var id = $(obj).parent().attr("id");
+	if($(obj).parent().find("h5").html() == user.email) {
+		ref = db.ref("root/memos/"+id);
+		ref.remove();
+	}
+	else {
+		alert("타인의 글은 삭제할 수 없습니다.");
+	}
+}
+  //fullpage-event
 
 	/*
 	 -case 1
@@ -335,3 +383,14 @@ function imgMove(){
    
 }
 imgMove(); 
+
+var banner = new Slide($("#slides2"), {
+	type: "infinite",
+	delay: 1500,
+	speed: 1500,
+	hover: true,
+	pager: true,
+	pagerPos: "bottom",
+	pagerVal: "10px",
+	pagerSymbol: "●",
+});
