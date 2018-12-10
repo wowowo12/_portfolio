@@ -248,7 +248,7 @@ $(window).scroll(function () {
 				data: [75, 25],
 				backgroundColor: [
 					'#ffb300',
-					'#fff'
+					'#ffe19b'
 				],
 				borderWidth: 0
 		}]
@@ -257,7 +257,7 @@ $(window).scroll(function () {
 				data: [70,30],
 				backgroundColor: [
 					'#ffb300',
-					'#fff'
+					'#ffe19b'
 				],
 				borderWidth: 0
 		}]
@@ -266,7 +266,7 @@ $(window).scroll(function () {
 				data: [80,20],
 				backgroundColor: [
 					'#ffb300',
-					'#fff'
+					'#ffe19b'
 				],
 				borderWidth: 0
 		}]
@@ -275,7 +275,7 @@ $(window).scroll(function () {
 			data: [60,40],
 			backgroundColor: [
 				'#ffb300',
-				'#fff'
+				'#ffe19b'
 			],
 			borderWidth: 0
 	}]
