@@ -110,6 +110,69 @@ function revData(obj){
 	});
 	
 
+	var data = [{
+		datasets: [{
+				data: [75, 25],
+				backgroundColor: [
+					'#ffb300',
+					'#ffe19b'
+				],
+				borderWidth: 0
+		}]
+	},{
+	datasets: [{
+				data: [70,30],
+				backgroundColor: [
+					'#ffb300',
+					'#ffe19b'
+				],
+				borderWidth: 0
+		}]
+	},{
+		datasets: [{
+				data: [80,20],
+				backgroundColor: [
+					'#ffb300',
+					'#ffe19b'
+				],
+				borderWidth: 0
+		}]
+	},{
+	datasets: [{
+			data: [60,40],
+			backgroundColor: [
+				'#ffb300',
+				'#ffe19b'
+			],
+			borderWidth: 0
+	}]
+}];
+	var option = [{
+		tooltips : {
+			enabled: false
+		},
+	cutoutPercentage: 65
+		
+	},{
+		tooltips : {
+			enabled: false
+		},
+		cutoutPercentage: 65
+	},{
+		tooltips : {
+			enabled: false
+		},
+		cutoutPercentage: 65
+	},{
+		tooltips : {
+			enabled: false
+		},
+		cutoutPercentage: 65
+	}];
+	var chart = [];
+
+
+
   var scTop = $(window).scrollTop(); //현재 윈도우의 scrollTop의값
   var gap = [];
   var now = 0;
@@ -137,7 +200,20 @@ function revData(obj){
   		if (now > 0) now--; //+일땐 -
   	} else {
   		if (now < gap.length - 1) now++;
-  	}
+		}
+
+		if(now == 1) {
+			var ctx = $(".chart");
+			ctx.each(function(i){
+				chart[i] = new Chart($(this), {
+					type: 'doughnut',
+					data: data[i],
+					options: option[i]
+				});
+			});
+		}
+
+
   	$("html, body").stop().animate({
   		"scrollTop": gap[now] + "px"
   	}, 300, function () {
@@ -232,75 +308,9 @@ $(window).scroll(function () {
 			},]
 		},
 	});*/
-	var data = [{
-		datasets: [{
-				data: [75, 25],
-				backgroundColor: [
-					'#ffb300',
-					'#ffe19b'
-				],
-				borderWidth: 0
-		}]
-	},{
-	datasets: [{
-				data: [70,30],
-				backgroundColor: [
-					'#ffb300',
-					'#ffe19b'
-				],
-				borderWidth: 0
-		}]
-	},{
-		datasets: [{
-				data: [80,20],
-				backgroundColor: [
-					'#ffb300',
-					'#ffe19b'
-				],
-				borderWidth: 0
-		}]
-	},{
-	datasets: [{
-			data: [60,40],
-			backgroundColor: [
-				'#ffb300',
-				'#ffe19b'
-			],
-			borderWidth: 0
-	}]
-}];
-	var option = [{
-		tooltips : {
-			enabled: false
-		},
-	cutoutPercentage: 65
-		
-	},{
-		tooltips : {
-			enabled: false
-		},
-		cutoutPercentage: 65
-	},{
-		tooltips : {
-			enabled: false
-		},
-		cutoutPercentage: 65
-	},{
-		tooltips : {
-			enabled: false
-		},
-		cutoutPercentage: 65
-	}];
-	var chart = [];
 	
-	var ctx = $(".chart");
-	ctx.each(function(i){
-		chart[i] = new Chart($(this), {
-			type: 'doughnut',
-			data: data[i],
-			options: option[i]
-		});
-	});
+	
+	
 	
 	
 
@@ -373,7 +383,7 @@ function imgMove(){
 }
 imgMove(); 
 
-var banner = new Slide($("#slides2"), {
+/* var banner = new Slide($("#slides2"), {
 	type: "infinite",
 	delay: 1500,
 	speed: 1500,
@@ -382,4 +392,41 @@ var banner = new Slide($("#slides2"), {
 	pagerPos: "bottom",
 	pagerVal: "10px",
 	pagerSymbol: "●",
-});
+}); */
+
+
+
+var SpaAni = (function(){
+	function SpaAni(_page, _elem, _gap) {
+		var obj = this;
+		this.page = $(_page);
+		this.elem = _elem;
+		this.scTop = 0;
+		this.pos = [];
+		this.now = 0;
+		this.gap = _gap;
+		$(window).resize(function(){
+			for(var i=0; i<obj.page.length; i++) {
+				obj.pos[i] = $(obj.page[i]).position().top;
+			}
+		}).trigger("resize");
+		$(window).scroll(function(){
+			obj.scTop = $(this).scrollTop();
+			obj.init(obj);
+		}).trigger("scroll");
+	};
+	SpaAni.prototype.init = function(obj){
+		for(var i=0; i<obj.page.length; i++) {
+			if(obj.scTop+obj.gap > obj.pos[i]) obj.now = i;
+		}
+		$(obj.page[obj.now]).find(obj.elem).each(function(){
+			var cls = $(this).data("ani");
+			$(this).addClass("card");
+		});
+	};
+	return SpaAni;
+}());
+
+
+
+
