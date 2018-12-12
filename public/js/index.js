@@ -383,7 +383,7 @@ function imgMove(){
 }
 imgMove(); 
 
-/* var banner = new Slide($("#slides2"), {
+var banner = new Slide($("#slides2"), {
 	type: "infinite",
 	delay: 1500,
 	speed: 1500,
@@ -392,7 +392,7 @@ imgMove();
 	pagerPos: "bottom",
 	pagerVal: "10px",
 	pagerSymbol: "●",
-}); */
+}); 
 
 
 

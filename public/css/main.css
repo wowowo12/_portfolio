@@ -76,7 +76,6 @@ position:relative; border-radius: 0 0 15% 15%;}
 .web_bottom{height:35%;}
 .web_imgs{width:42.5%; margin:0 auto;}
 
-
 .button_p{position:absolute; bottom:1%; left:20%; z-index:3 }
 .button_n{position:absolute; bottom:1%; right:20%; z-index:3 }
 /* web_bottom */
@@ -185,12 +184,12 @@ border-radius: 50%; margin:3% auto 0; font-size:0.875rem; }
     0%{width:0;}
     100%{width:85%;}
 }
-@media screen and (max-width:1280px){
+@media screen and (max-width:1366px){
     html, body{font-size:0.875rem;}
     #web .desk_top{max-width:500px;}
 
     .web_top{padding-top:2%; height:60%;}
-    .web_imgs{width:31.5%; margin:0 auto;}
+    .web_imgs{width:35%; margin:0 auto;}
     .web_bottom{height:40%;}
     .web_right, .web_left{display:none;}
     .poster{height:27.5%;}
