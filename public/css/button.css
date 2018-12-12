@@ -21,6 +21,7 @@
       }
       #google_login:hover a, #google_logout:hover a{
         color:#fff;
+        z-index:3;
       }
 
     
