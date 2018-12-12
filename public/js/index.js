@@ -371,7 +371,8 @@ function imgMove(){
        if(movePause==true){ 
           // 이동을 멈춘다 
           $(this).stop(); 
-      } 
+	  } 
+	  
        },complete:function(){ 
       // 이동을 마친후 마지막 a태그를 지워버린다 
       //$(".RollDiv > div > a:last").remove(); 
@@ -392,7 +393,7 @@ var banner = new Slide($("#slides2"), {
 	pagerPos: "bottom",
 	pagerVal: "10px",
 	pagerSymbol: "●",
-}); 
+}); y
 
 
 

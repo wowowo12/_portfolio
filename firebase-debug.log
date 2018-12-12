@@ -1,0 +1,29 @@
+[debug] [2018-12-12T11:49:04.588Z] ----------------------------------------------------------------------
+[debug] [2018-12-12T11:49:04.610Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\예솔\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-12-12T11:49:04.612Z] CLI Version:   6.1.2
+[debug] [2018-12-12T11:49:04.612Z] Platform:      win32
+[debug] [2018-12-12T11:49:04.612Z] Node Version:  v8.12.0
+[debug] [2018-12-12T11:49:04.622Z] Time:          Wed Dec 12 2018 20:49:04 GMT+0900 (대한민국 표준시)
+[debug] [2018-12-12T11:49:04.623Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-12-12T11:49:04.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-12-12T11:49:04.843Z] > authorizing via signed-in user
+[debug] [2018-12-12T11:49:04.844Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2018-12-12T11:49:04.892Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-12-12T11:49:04.896Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-12-12T11:49:06.626Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-12T11:49:06.669Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+
+[debug] [2018-12-12T11:49:08.582Z] <<< HTTP RESPONSE 200
+[debug] [2018-12-12T11:49:08.590Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+ 
+[debug] [2018-12-12T11:49:10.340Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\예솔\Downloads\froot\portfolio'...
+[info] 
+[debug] [2018-12-12T11:49:11.156Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+ 
+[debug] [2018-12-12T11:49:12.667Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
