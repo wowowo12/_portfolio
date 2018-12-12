@@ -156,7 +156,7 @@ display:inline-block; text-align:center;  line-height:35px; }
      cursor:pointer; position:relative; overflow:hidden; }
 #google_login a, #google_logout a{position:relative; }
 #google_logout{display:none; color:#000;}
-.ct_rt>.ct_wrap{ border:5px solid #ffe5a8; text-align:center; margin-top:-1%;
+.ct_rt>.ct_wrap{ border:5px solid #ffe5a8; text-align:center;
     height:70%; background-color:#fff; border-radius:0 0 6% 6%; width:70%;}
 .ct_wrap>.lists{height:67%;overflow-y:scroll;}
 .lists > li {background-color:#ffe5a8; width:90%; margin:3% auto 0; height:33.33%;
