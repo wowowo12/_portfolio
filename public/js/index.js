@@ -211,7 +211,13 @@ function revData(obj){
 					options: option[i]
 				});
 			});
-		}
+
+			$(".me_left").addClass("me_left_ani");
+			$(".me_right").addClass("me_right_ani");
+			$(".software").addClass("software_ani");
+			$(".skills").addClass("skills_ani");
+			$(".range_bg").children().addClass("range");
+				}
 
 
   	$("html, body").stop().animate({

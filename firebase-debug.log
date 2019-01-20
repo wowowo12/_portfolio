@@ -1,0 +1,42 @@
+[debug] [2019-01-08T08:10:10.170Z] ----------------------------------------------------------------------
+[debug] [2019-01-08T08:10:10.202Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\예솔\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2019-01-08T08:10:10.204Z] CLI Version:   6.1.2
+[debug] [2019-01-08T08:10:10.204Z] Platform:      win32
+[debug] [2019-01-08T08:10:10.204Z] Node Version:  v8.12.0
+[debug] [2019-01-08T08:10:10.213Z] Time:          Tue Jan 08 2019 17:10:10 GMT+0900 (대한민국 표준시)
+[debug] [2019-01-08T08:10:10.214Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+[info] Visit this URL on any device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=989292064&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2019-01-20T05:55:48.247Z] ----------------------------------------------------------------------
+[debug] [2019-01-20T05:55:48.278Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\예솔\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-01-20T05:55:48.278Z] CLI Version:   6.3.0
+[debug] [2019-01-20T05:55:48.278Z] Platform:      win32
+[debug] [2019-01-20T05:55:48.278Z] Node Version:  v8.12.0
+[debug] [2019-01-20T05:55:48.278Z] Time:          Sun Jan 20 2019 14:55:48 GMT+0900 (대한민국 표준시)
+[debug] [2019-01-20T05:55:48.278Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-01-20T05:55:48.386Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-01-20T05:55:48.386Z] > authorizing via signed-in user
+[debug] [2019-01-20T05:55:48.386Z] [iam] checking project wowowo-portfolio for permissions ["firebase.projects.get"]
+[debug] [2019-01-20T05:55:48.402Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-01-20T05:55:48.402Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-01-20T05:55:49.921Z] <<< HTTP RESPONSE 200
+[debug] [2019-01-20T05:55:50.004Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio:testIamPermissions  
+
+[debug] [2019-01-20T05:55:52.353Z] <<< HTTP RESPONSE 200
+[debug] [2019-01-20T05:55:52.353Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wowowo-portfolio  
+ 
+[debug] [2019-01-20T05:55:54.799Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\예솔\Downloads\froot\portfolio'...
+[info] 
+[debug] [2019-01-20T05:55:54.828Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/136439368227/clients/_:getWebAppConfig  
+ 
+[debug] [2019-01-20T05:55:57.260Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
